@@ -50,7 +50,7 @@ const WebGLCanvas = ({ settings, triggerRandomAnimation }) => {
 
     // Set up animation loop
     const render = (time) => {
-      time *= 0.001;  // convert to seconds
+      time *= 0.001 * settings.speed;  // convert to seconds and adjust by speed
 
       // Resize canvas to display size
       resizeCanvasToDisplaySize(gl.canvas);

@@ -42,6 +42,17 @@ const ControlPanel = ({ settings, onSettingsChange }) => {
             onChange={handleChange}
           />
         </FormControl>
+        <FormControl>
+          <FormLabel>Speed</FormLabel>
+          <Input
+            type="number"
+            name="speed"
+            value={settings.speed}
+            onChange={handleChange}
+            min="0.1"
+            step="0.1"
+          />
+        </FormControl>
         <FormControl display="flex" alignItems="center">
           <FormLabel htmlFor="cursorInteraction" mb="0">
             Cursor Interaction

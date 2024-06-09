@@ -9,6 +9,7 @@ const Index = () => {
     numParticles: 100,
     shapeType: "circle",
     color: "#ff0000",
+    speed: 1.0,
     cursorInteraction: true,
   });
 
