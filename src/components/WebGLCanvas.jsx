@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const WebGLCanvas = ({ settings }) => {
+const WebGLCanvas = ({ settings, animate }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -21,7 +21,12 @@ const WebGLCanvas = ({ settings }) => {
     // This should be replaced with actual rendering logic
     console.log(settings);
 
-  }, [settings]);
+    if (animate) {
+      // Logic to animate shapes randomly
+      console.log("Animating shapes randomly");
+    }
+
+  }, [settings, animate]);
 
   return <canvas ref={canvasRef} width="800" height="600" />;
 };
